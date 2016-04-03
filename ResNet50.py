@@ -6,6 +6,7 @@ import chainer
 import chainer.functions as F
 import chainer.links as L
 
+
 class BottleNeckA(chainer.Chain):
     def __init__(self, in_size, ch, out_size, stride=2):
         w = math.sqrt(2)
@@ -65,9 +66,14 @@ class Block(chainer.Chain):
         for name,_ in self.forward:
             f = getattr(self, name)
             h = f(x if name == 'a' else h, train)
+
         return h
 
+
 class ResNet(chainer.Chain):
+
+    insize = 224
+
     def __init__(self):
         w = math.sqrt(2)
         super(ResNet, self).__init__(
@@ -93,7 +99,9 @@ class ResNet(chainer.Chain):
         h = self.res3(h, self.train)
         h = self.res4(h, self.train)
         h = self.res5(h, self.train)
-        h = F.average_pooling_2d(h, 7, 1)
+        h = F.average_pooling_2d(h, 7, stride=1)
         h = self.fc(h)
 
-        return F.softmax_cross_entropy(h, t), F.accuracy(h, t)
+        self.loss = F.softmax_cross_entropy(h, t)
+        self.accuracy = F.accuracy(h, t)
+        return self.loss
