@@ -83,7 +83,7 @@ class ResNet(chainer.Chain):
             res3=Block(8, 256, 128, 512),
             res4=Block(36, 512, 256, 1024),
             res5=Block(3, 1024, 512, 2048),
-            fc=L.Linear(2048, 1000, w),
+            fc=L.Linear(2048, 1000),
         )
         self.train = True
 
