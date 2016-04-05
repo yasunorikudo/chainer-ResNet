@@ -102,6 +102,9 @@ class ResNet(chainer.Chain):
         h = F.average_pooling_2d(h, 7, stride=1)
         h = self.fc(h)
 
-        self.loss = F.softmax_cross_entropy(h, t)
-        self.accuracy = F.accuracy(h, t)
-        return self.loss
+        if self.train:
+            self.loss = F.softmax_cross_entropy(h, t)
+            self.accuracy = F.accuracy(h, t)
+            return self.loss
+        else:
+            return h
