@@ -2,7 +2,10 @@ Deep Residual Network implementation by Chainer
 ========
 
 Implementation by Chainer. Original paper is [Deep Residual Learning for Image Recognition](http://arxiv.org/abs/1512.03385).
+
 This repository includes network definition scripts, caffemodel converter and prediction scripts.
+
+If you want to train ResNet from scratch, see [chainer sample code](https://github.com/pfnet/chainer/tree/master/examples/imagenet)
 
 # Requirements
 
