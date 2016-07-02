@@ -58,16 +58,16 @@ class Block(chainer.Chain):
         for i in range(layer-1):
             links += [('b{}'.format(i+1), BottleNeckB(out_size, ch))]
 
-        for link in links:
-            self.add_link(*link)
+        for l in links:
+            self.add_link(*l)
         self.forward = links
 
     def __call__(self, x, train):
-        for name,_ in self.forward:
+        for name, _ in sorted(self.forward):
             f = getattr(self, name)
-            h = f(x if name == 'a' else h, train)
+            x = f(x)
 
-        return h
+        return x
 
 
 class ResNet(chainer.Chain):
