@@ -65,7 +65,7 @@ class Block(chainer.Chain):
     def __call__(self, x, train):
         for name, _ in sorted(self.forward):
             f = getattr(self, name)
-            x = f(x)
+            x = f(x, train)
 
         return x
 
