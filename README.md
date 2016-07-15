@@ -49,9 +49,9 @@ If you do not want to use Caffe, you can download Chainer models.
 
 Run:
 ```
-wget https://dl.dropboxusercontent.com/s/4mvqcp9qr9ldjgc/ResNet50.model
-wget https://dl.dropboxusercontent.com/s/yqasroj1poru24u/ResNet101.model
-wget https://dl.dropboxusercontent.com/s/he2ndi7f9jixak6/ResNet152.model
+wget https://www.dropbox.com/s/4mvqcp9qr9ldjgc/ResNet50.model
+wget https://www.dropbox.com/s/yqasroj1poru24u/ResNet101.model
+wget https://www.dropbox.com/s/he2ndi7f9jixak6/ResNet152.model
 ```
 
 # Predict
