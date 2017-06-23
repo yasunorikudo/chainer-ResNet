@@ -25,7 +25,7 @@ Run:
 
 ```
 git clone --recursive https://github.com/KaimingHe/deep-residual-networks.git
-cd deep-residual-networks/caffe  
+cd deep-residual-networks/caffe
 ```
 After making Makefile.config
 
@@ -59,5 +59,14 @@ wget https://www.dropbox.com/s/he2ndi7f9jixak6/ResNet152.model
 Run:
 
 ```
-python predict.py --model ResNet152 --img cat.png
+python predict.py --model ResNet50 --img cat.png
+```
+
+
+# Evaluate pre-train model
+
+For example, run:
+
+```
+python evaluate.py --model ResNet50 --root /path/to/imagenet/val --gpu 0
 ```
