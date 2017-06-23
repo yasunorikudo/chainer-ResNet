@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import argparse
+from chainer import serializers
+
 import sys
 sys.path.insert(0, './deep-residual-networks/caffe/python')
 import caffe
-from chainer import serializers
-import argparse
+
 
 def mk_list(res, k='a'):
     l = []
@@ -75,6 +77,7 @@ def setattr_list(obj, name_list, value):
     for i in range(2, len(name_list)+1):
         x = setattr_part(obj, name_list, x, i)
     return x
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
