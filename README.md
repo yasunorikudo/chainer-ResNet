@@ -11,6 +11,7 @@ If you want to train ResNet from scratch, see [chainer sample code](https://gith
 
 - [Chainer 1.24.0](https://github.com/pfnet/chainer) (Neural network framework)
 
+- progressbar2 2.7.3
 
 # Preparation
 
