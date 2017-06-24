@@ -79,4 +79,4 @@ ResNet101 : 0.2357 (0.236)
 
 ResNet152 : 0.2319 (0.230)
 
-The numbers in () are error rate taht original repository reported. See [here](https://github.com/KaimingHe/deep-residual-networks).
+The numbers in () are error rate that original repository reported. See [here](https://github.com/KaimingHe/deep-residual-networks).
