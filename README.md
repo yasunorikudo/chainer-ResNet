@@ -9,7 +9,7 @@ If you want to train ResNet from scratch, see [chainer sample code](https://gith
 
 # Requirements
 
-- [Chainer 1.5+](https://github.com/pfnet/chainer) (Neural network framework)
+- [Chainer 1.24.0](https://github.com/pfnet/chainer) (Neural network framework)
 
 
 # Preparation
