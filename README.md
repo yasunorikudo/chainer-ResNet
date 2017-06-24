@@ -70,3 +70,13 @@ For example, run:
 ```
 python evaluate.py --model ResNet50 --root /path/to/imagenet/val --gpu 0
 ```
+
+1-crop validation error (top-1) for ImageNet validation set are as follows.
+
+ResNet50  : 0.2479 (0.247)
+
+ResNet101 : 0.2357 (0.236)
+
+ResNet152 : 0.2319 (0.230)
+
+The numbers in () are error rate taht original repository reported. See [here](https://github.com/KaimingHe/deep-residual-networks).
