@@ -53,3 +53,4 @@ if __name__ == '__main__':
         count += len(t)
         pbar.update(count)
     print('1-crop validation error (top-1) :', 1 - sum_accuracy / count)
+    val_iter.finalize()
